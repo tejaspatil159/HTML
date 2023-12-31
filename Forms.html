@@ -9,13 +9,15 @@
 
 <body>
     <form action="./forms.json" method="post">
-        <section class="username">
-            <label for="uname">Username : </label>
-            <input required id="uname" type="text" name="username">
+        <section class="email">
+            <label for="email">Email : </label>
+            <input minlength="5" maxlength="100" pattern=" ^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" required id="email"
+                type="text" name="email">
         </section>
         <section class="password">
             <label for="pass">Password : </label>
-            <input required id="pass" max="15" min="8" type="password" name="password">
+            <input pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$" id="pass" maxlength="15"
+                minlength="8" type="password" name="password">
         </section>
         <section class="Greet">
             <label for="greet">Range : </label>
@@ -43,8 +45,39 @@
             <label for="female">Female</label>
             <input type="radio" id="female" name="Gender">
         </section>
-
-
+        <section class="Field">
+            <label for="field">Field</label>
+            <select id="field" name="field">
+                <option value="mechanical">Mechanical</option>
+                <option value="it">IT</option>
+                <option value="extc">Electronics and telecomunication</option>
+                <option value="chemical">Chemical</option>
+            </select>
+        </section>
+        <section class="country">
+            <label for="country">Country</label>
+            <input id="country" name="Country" list="coun" type="text">
+            <datalist id="coun">
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="china">China</option>
+                <option value="uk">UK</option>
+                <option value="germany">Germany</option>
+                <option value="france">France</option>
+                <option value="shrilanka">Shrilanka</option>
+                <option value="pakistan">Pakistan</option>
+                <option value="russia">Russia</option>
+                <option value="sounth africa">South Africa</option>
+            </datalist>
+        </section>
+        <section class="Message">
+            <label for=" mes">Message</label>
+            <textarea id="mes" name="Message" rows="1" cols="30">
+            </textarea>
+        </section>
+        <section class="submit">
+            <input type="submit" value="submit" />
+        </section>
     </form>
 
 </body>
