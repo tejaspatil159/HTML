@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <form action="./forms.json" method="post">
+        <section class="username">
+            <label for="uname">Username : </label>
+            <input required id="uname" type="text" name="username">
+        </section>
+        <section class="password">
+            <label for="pass">Password : </label>
+            <input required id="pass" max="15" min="8" type="password" name="password">
+        </section>
+        <section class="Age">
+            <label for="age">Range : </label>
+            <span>Hello</span>
+            <input max="15" min="8" id="age" step=1 type="range" name="Range">
+            <span>Bye</span>
+        </section>
+        <section class="Range">
+            <label for="age">Age : </label>
+            <span>Hello</span>
+            <input max="150" min="1" id="age" step=1 type="number" name="age">
+            <span>Bye</span>
+        </section>
+
+
+    </form>
+
+</body>
+
+</html>
